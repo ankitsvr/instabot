@@ -25,4 +25,5 @@ def get_user_info(insta_username):
   else:
       print 'Status code other than 200 received!'
 
-get_user_info("shivam.walia")
+username=sys.argv[1:]
+get_user_info(username)
