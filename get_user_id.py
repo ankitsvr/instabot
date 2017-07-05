@@ -13,4 +13,3 @@ def get_user_id(insta_username):
   else:
       print "unable to acces the info"
       exit()
-get_user_id("")
