@@ -4,6 +4,8 @@ import requests
 from get_user_id import *
 from constants import *
 import sys
+import time
+
 def get_user_info(insta_username):
   user_id = get_user_id(insta_username)
   if user_id == None:
@@ -24,7 +26,9 @@ def get_user_info(insta_username):
           no_of_post= 'No. of posts: %s' % (user_info['data']['counts']['media'])
           info_list=[user,id,follower,following,no_of_post]
           for x in range(len(info_list)):
-              print(info_list[x],end='')
+              print(info_list[x],end=' ')
+              time.sleep(1)
+
 
       else:
           print ('There is no data for this user!')
