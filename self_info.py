@@ -9,8 +9,9 @@ def self_info():
     if user_info['meta']['code']==200:
         if len(user_info['data']):
             print "Username: %s" %user_info['data']['username']
-            print "No of follower: %s" % (user_info['data']['count']['followed_by'])
-            print "no of post :%s" %(user_info['data']['count']['media'])
+            print "User_id: %s" % user_info['data']['id']
+            print "No of follower: %s" % (user_info['data']['counts']['followed_by'])
+            print "no of post :%s" %(user_info['data']['counts']['media'])
         else:
             print "user does not exist"
     else:
