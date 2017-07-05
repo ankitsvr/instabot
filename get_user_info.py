@@ -35,5 +35,7 @@ def get_user_info(insta_username):
   else:
       print ('Status code other than 200 received!')
 # take input from user at time of sys argument
-username=sys.argv[1:]
-get_user_info(username)
+if not len(sys.argv[1:]):
+    print ("username must be suplied as argument")
+else:
+    get_user_info(sys.argv[1:])
