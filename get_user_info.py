@@ -2,6 +2,7 @@
 from __future__ import print_function
 from get_user_id import *
 from constants import *
+import time
 #def function for user information
 def get_user_info(insta_username):
   user_id = get_user_id(insta_username)
@@ -15,15 +16,19 @@ def get_user_info(insta_username):
 
   if user_info['meta']['code'] == 200:
       if len(user_info['data']):
+
+          #fetch from json format and store in variable
           user='Username: %s' % (user_info['data']['username'])
           id= 'ID: %s' % (user_info['data']['id'])
-          follower= 'No. of followers: %s' % (user_info['data']['counts']['followed_by'])
+          follower= 'No.of followers: %s' % (user_info['data']['counts']['followed_by'])
           following='No. of people you are following: %s' % (user_info['data']['counts']['follows'])
           no_of_post='No. of posts: %s' % (user_info['data']['counts']['media'])
 
-          info_list=(user,id,follower,following,no_of_post)
+          #user information store in list
+          info_list=[user,id,follower,following,no_of_post]
           for x in range(len(info_list)):
-              print(info_list(x),end="....")
+              print(info_list[x],end="   ")
+              time.sleep(.700)#wait .700 microsecond then loop again
 
       else:
           print ('There is no data for this user!')
