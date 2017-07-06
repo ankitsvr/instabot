@@ -3,11 +3,11 @@ import requests
 def get_posts():
     url=BASE_URL+'users/self/media/recent/?access_token=%s' %(APP_ACCESS_TOKEN)
     print "GET request url %s " % url
-    request_result=requests.get(url).json()
+    request=requests.get(url).json()
 
-    if request_result['meta']['code']==200:
-        if len(request_result['data']):
-            return request_result['data'][0  ]
+    if request['meta']['code']==200:
+        if len(request['data']):
+            print request['data'][0]['id']
 
         else:
             print "data not recieved"

@@ -1,6 +1,6 @@
 import requests
 from constants import *
-
+import urllib
 def self_info():
     request_url=BASE_URL +'users/self/?access_token=%s' %(APP_ACCESS_TOKEN)
     print 'GET request url :%s' %(request_url)
@@ -12,6 +12,11 @@ def self_info():
             print "User_id: %s" % user_info['data']['id']
             print "No of follower: %s" % (user_info['data']['counts']['followed_by'])
             print "no of post :%s" %(user_info['data']['counts']['media'])
+
+            image_url=user_info['data']['profile_picture']
+            image_name=user_info['data']['id']+'.jpeg'
+            urllib.urlretrieve(image_url,image_name)
+            print "image downloaded"
         else:
             print "user does not exist"
     else:
