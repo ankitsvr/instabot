@@ -3,6 +3,7 @@ from __future__ import print_function
 from get_user_id import *
 from constants import *
 import time
+
 #def function for user information
 def get_user_info(insta_username):
   user_id = get_user_id(insta_username)
@@ -10,10 +11,12 @@ def get_user_info(insta_username):
     print ('User does not exist!')
     exit()
 
-  request_url = BASE_URL + 'users/%s?access_token=%s' %(user_id, APP_ACCESS_TOKEN)
+  request_url = BASE_URL + 'users/%s?access_token=%s' %(user_id, APP_ACCESS_TOKEN) #url of user along with  usr id and your access token
   print ('GET request url : %s' % (request_url))
-  user_info = requests.get(request_url).json()
+  user_info = requests.get(request_url).json()#fetch data from content of url query
 
+
+  #check what is the result of query
   if user_info['meta']['code'] == 200:
       if len(user_info['data']):
 
