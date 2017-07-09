@@ -1,6 +1,8 @@
+#import all nessassry libararid
 import requests
 from constants import *
 import urllib
+#function for fetch own info of instagram account
 def self_info():
     request_url=BASE_URL +'users/self/?access_token=%s' %(APP_ACCESS_TOKEN)
     print 'GET request url :%s' %(request_url)
