@@ -1,13 +1,18 @@
-
+#import all need labraries and functions from files
 from wordcloud import WordCloud
 import os
 
 
 def wordcloud():
-    text=open(os.path.join('name.txt')).read()
+    #open file in read mode
+    open_file=open('name.txt','r')
+    #read the text from text file
+    text=open_file.read()
+    #generate wordcloud of txt from text file
     wordcloud=WordCloud().generate(text)
 
-    raw_input("here is my word cloud")
+    raw_input("\t\t\t\t*****************press any key to genrate word cloud*******************")
+
     #display the generated image
     import matplotlib.pyplot as plt
 
@@ -19,6 +24,9 @@ def wordcloud():
     plt.imshow(wordcloud,interpolation='bilinear')
     plt.axis("off")
     plt.show()
+    #this block of code erase all content of txt file and close
     open('name.txt', 'w').close()
+
+
 
 
