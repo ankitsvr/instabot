@@ -38,5 +38,3 @@ def del_neg_comment(insta_username):
             print 'no comments on the post!'
     else:
         print 'no response from server'
-
-del_neg_comment('rahul_r2557')

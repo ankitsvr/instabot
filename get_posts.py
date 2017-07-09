@@ -7,7 +7,7 @@ def get_posts():
 
     if request['meta']['code']==200:
         if len(request['data']):
-            print request['data'][0]['id']
+            return request['data'][0]['id']
 
         else:
             print "data not recieved"
@@ -15,4 +15,3 @@ def get_posts():
     else:
         print "user does not exist"
 
-get_posts()

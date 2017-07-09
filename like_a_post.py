@@ -19,4 +19,3 @@ def like_a_post(insta_username):
         print "like not completed"
 
 #calling the defined function
-like_a_post(raw_input("enter a  username: >"))
