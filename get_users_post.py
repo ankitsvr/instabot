@@ -22,5 +22,3 @@ def get_user_post(insta_username):
             print"data not found"
     else:
         print "code other than 200"
-
-get_user_post(raw_input("enter username:>"))
