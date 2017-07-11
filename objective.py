@@ -2,7 +2,7 @@
 from constants import *
 import requests
 from get_user_id import get_user_id
-from w import wordcloud
+from wordcloud import wordcloud
 #function which fetch the hash tag comment from users post
 def get_hash_tag(insta_username):
     user_id=get_user_id(insta_username)
@@ -14,7 +14,7 @@ def get_hash_tag(insta_username):
     req_media=requests.get(url).json()
 
     #open a text file
-    file=open("name.txt",'w')
+    file=open("wordcloud_content.txt",'w')
     for posts in req_media['data']:
 
     #write the caption text or hashtag coments in text file in utf-8 encoding

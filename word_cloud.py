@@ -5,7 +5,7 @@ import os
 
 def wordcloud():
     #open file in read mode
-    open_file=open('name.txt','r')
+    open_file=open('wordcloud_content.txt','r')
     #read the text from text file
     text=open_file.read()
     #generate wordcloud of txt from text file
