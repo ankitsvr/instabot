@@ -26,6 +26,6 @@ def get_hash_tag(insta_username):
     wordcloud()
 
     #call the fuction
-get_hash_tag("shivam.walia")
+
 
 
