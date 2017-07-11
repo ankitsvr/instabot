@@ -2,7 +2,7 @@
 from constants import *
 import requests
 from get_user_id import get_user_id
-from wordcloud import wordcloud
+from obj_cloud import wordcloud
 #function which fetch the hash tag comment from users post
 def get_hash_tag(insta_username):
     user_id=get_user_id(insta_username)

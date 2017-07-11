@@ -1,6 +1,6 @@
 #import all need labraries and functions from files
-from wordcloud import WordCloud
 import os
+from wordcloud import WordCloud
 
 
 def wordcloud():
