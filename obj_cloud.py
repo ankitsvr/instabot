@@ -25,7 +25,7 @@ def wordcloud():
     plt.axis("off")
     plt.show()
     #this block of code erase all content of txt file and close
-    open('name.txt', 'w').close()
+    open('wordcloud_content.txt', 'w').close()
 
 
 

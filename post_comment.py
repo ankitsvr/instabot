@@ -16,7 +16,7 @@ def post_comment(insta_username):
 
     #check what is the response from server
     if make_comment['meta']['code']==200:
-        print "commect successfull posted "
+        print "\n\n\t\t............commect successfull posted "
 
     else:
         print "commect not posted"
