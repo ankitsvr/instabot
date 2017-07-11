@@ -17,8 +17,9 @@ def get_hash_tag(insta_username):
     file=open("wordcloud_content.txt",'w')
     for posts in req_media['data']:
 
-    #write the caption text or hashtag coments in text file in utf-8 encoding
+        #write the caption text or hashtag coments in text file in utf-8 encoding
         file.write(posts['caption']['text'].encode('utf-8')+'  ')
+
     #close the file
     file.close()
 
@@ -26,6 +27,7 @@ def get_hash_tag(insta_username):
     wordcloud()
 
     #call the fuction
+
 
 
 

@@ -59,12 +59,14 @@ def init_bot():
                 del_neg_comment(insta_username)
 
             elif select_option == 'H':
-                insta_username=raw_input("Enter Username::")
+
+                insta_username='shivam.walia'
                 get_hash_tag(insta_username)
 
 
             elif select_option =='EXIT':
                  instabot=False
+
 
         except:
             print ("This is not valid option")
